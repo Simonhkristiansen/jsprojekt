@@ -1,31 +1,15 @@
 
 
-
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This makes sure the content is centered both horizontally and vertically. */
+}
 
 #logo {
-height: 92px;
+height: 15vw;
 width: auto;
-display: block;
-margin: auto;
-}
 
-.searchbar{
-    display: block;
-    margin: auto;
-}
 
-.sogknapper{
-
-}
-
-/* 
-#lykken{
-    display: block;
-    margin: auto;
-}
-
-#søgning{
-    display: block;
-    margin: auto;
-}
-*/
