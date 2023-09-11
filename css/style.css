@@ -13,5 +13,15 @@ margin-bottom: 10px;
 }
 
 .sogknapper {
-    margin: 1%;;
+    margin: 1%;
+}
+
+#søgning{
+border: none;
+padding: 2%;
+}
+
+#lykken{
+    border: none;
+    padding: 2%;
 }
