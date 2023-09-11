@@ -1,5 +1,3 @@
-
-
 body {
     display: flex;
     flex-direction: column;
@@ -11,5 +9,9 @@ body {
 #logo {
 height: 15vw;
 width: auto;
+margin-bottom: 10px;
+}
 
-
+.sogknapper {
+    margin: 1%;;
+}
