@@ -1,27 +1,432 @@
-body {
+header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+/* Nav-bar starter her */
+
+.hero{
+    width: 90%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-left: -20px;
+}
+
+
+/* Google bruger billede */
+
+.user-pic{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+/* Prikker */
+
+.dots {
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+/* Gmail og billede */
+
+nav ul {
+    width: 100%;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+}
+
+nav ul li a {
+    color: #202124;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+
+/* Google konto - åben funktion */
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.1s;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 650px;
+    transition: height 0.1s;
+}
+
+.sub-menu {
+    background-color: #ececec;
+    padding: 30px;
+    margin: 0.5px;
+    border-radius: 10%;
+}
+
+
+/* Informations tekst i åben Google funktion */
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.user-info p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.user-info img {
+    width: 60px;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+.user-info h2 {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Informations bokse i åben Google funktion (adminstrationsknap) */
+
+.info-box1 {
+    background-color: #ececec;
+    border: 0.5px solid #000000;
+    border-radius: 20px;
+    font-size: 12px;
+    color: blue;
+    width: 200px;
+}
+
+.info-box1:hover{
+    background-color: #E5F3FD;;
+}
+
+
+/* Informations bokse i åben Google funktion (hvide knapper) */
+
+.info-box {
+    background-color: white;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    text-align: justify;
+    font-size: 14px;
+    width: 260px;
+    margin-top: 20px;
+    display: flex;
+
+}
+
+.info-box img {
+    width: 18%;
+    height: 18%;
+    display: inline-block;
+    align-items: center;
+    margin-right: 10px;
+}
+
+
+/* Privatlivspolitik og servicevilkår */
+
+#politik {
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+
+/* Pop up funktioner under prikker og user-pic */
+
+.user-info-popup {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 88%;
+    background-color: #878787;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.dots-popup {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 90%;
+    background-color: #878787;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+figure {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+
+
+
+
+
+main {
+    display: inline-block;
+    line-height: 28px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    margin-top: 250px;
+    font-size: 12px;
+    color: #000000;
+    font-family: arial,sans-serif;
 }
 
 #logo {
-height: 15vw;
-width: auto;
-margin-bottom: 10px;
+    height: 5vw;
+    width: auto;
+    margin-bottom: 10px;
 }
 
-.sogknapper {
-margin: 1%;
+
+.searchbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchInput{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.input{ 
+    position: absolute;
+    border: 0.1px solid rgb(199, 198, 198);
+    border-radius: 100px;
+    height: 40px;
+    width: 400px;
+    padding-left: 50px;
+}
+
+
+.resultatboks{
+    position: absolute;
+    width: 445px;
+    list-style: none;
+    padding-top: 50px;
+    margin-top: 110px;
+    padding-left: 5px;
+    border-left: 0.1px solid rgb(199, 198, 198);
+    border-right: 0.1px solid rgb(199, 198, 198);
+    border-bottom: 0.1px solid rgb(199, 198, 198);
+    border-radius: 15px;
+}
+
+.searchInput .resultatboks{
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .searchInput.active .resultatboks{
+    opacity: 1;
+    z-index: 1;
+  }
+
+.resultatboks li{
+    background: white;
+  }
+
+.resultatboks li:hover{
+  background: #efefef;
+}
+
+
+.ikoner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+input:focus{
+    outline: none;
+ }
+
+#loop{
+    width: 13px;
+    margin-right: 310%;
+}
+
+#tastatur{
+    width: 25px;
+}
+
+#mikrofon{
+    width: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#lense{
+    width: 23px;
+}
+
+#sogknapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
 }
 
 #søgning{
-border: none;
-padding: 3%;
+    border: none;
+    padding: 4%;
+    margin: 3%;
+    white-space: nowrap;
+    background-color: #f8f9fa;
+    border-radius: 3px;
 }
 
 #lykken{
-border: none;
-padding: 3%;
+    border: none;
+    padding: 4%;
+    margin: 3%;
+    white-space: nowrap;
+    background-color: #f8f9fa;
+    border-radius: 3px;
+}
+
+
+
+
+footer {
+    width: 99%;
+    padding-left: 0;
+    position: absolute;
+    bottom: 0;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    color: #6f6f6f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-location {
+    padding: 10px 30px;
+    border-bottom: 1px solid #dadce0;
+}
+
+.footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.left-menu a, 
+.right-menu {
+    text-decoration: none;
+    color: #6f6f6f;
+    padding: 0 20px 0 0;
+}
+
+.left-menu a:hover,
+.right-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Stil for dropdown menu */
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dark-mode-toggle {
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dark-mode-toggle:hover,
+.dropdown li:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1;
+    width: 150px;
+    right: 20px;
+    bottom: 35px;
+}
+
+/* Tilføj stregen over "Mørkt tema: Fra" */
+.dark-mode-toggle {
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    position: relative; /* Gør det muligt at positionere stregen */
+}
+
+.dark-mode-toggle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ccc; /* Farven på stregen */
 }
